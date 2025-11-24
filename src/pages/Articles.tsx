@@ -66,8 +66,10 @@ export default function Articles() {
 
 	return (
 		<>
-			<div className="sticky top-12 bg-black/10 w-full backdrop-blur-sm z-40 mb-2 flex items-center justify-between">
-				<h1 className="flex text-3xl p-2">{category ?? "All"} Articles</h1>
+			<div className="sticky top-12 bg-black/10 w-full backdrop-blur-sm z-40 mb-2 flex items-center justify-between flex-wrap">
+				<h1 className="flex text-2xl sm:text-3xl p-2">
+					{category ?? "All"} Articles
+				</h1>
 				<div className="flex">
 					<SearchArticleInput
 						placeholder="Search article with title..."

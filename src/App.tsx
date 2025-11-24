@@ -9,7 +9,7 @@ export default function App(): ReactNode {
 	return (
 		<>
 			<Header />
-			<section className={`flex pb-4 px-8 text-white`}>
+			<section className={`flex pb-4 px-2 sm:px-8 text-white`}>
 				<div className="w-full">
 					<Routes>
 						<Route index element={<Home />} />

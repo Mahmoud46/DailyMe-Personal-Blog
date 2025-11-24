@@ -9,7 +9,7 @@ export default function Hero(): ReactNode {
 	const { dataController, navigate } = useContext(Context) as IContext;
 
 	return (
-		<div className="w-full h-[calc(100dvh-65px)] sticky top-0 flex gap-2">
+		<div className="w-full h-[calc(100dvh-65px)] sticky top-0 flex gap-2 flex-col md:flex-row">
 			{dataController.articlesController.articles.length > 0 && (
 				<>
 					<div
@@ -75,9 +75,9 @@ export default function Hero(): ReactNode {
 							</div>
 						</div>
 					</div>
-					<div className="grid grid-cols-2 gap-2 flex-1">
+					<div className="grid grid-cols-3 sm:grid-cols-2 gap-2 sm:flex-1">
 						<div
-							className="flex flex-col justify-end"
+							className="aspect-square sm:aspect-auto flex flex-col justify-end"
 							style={{
 								backgroundImage: `url(${dataController.articlesController.articles[3].coverImage})`,
 								backgroundSize: "cover",
@@ -93,7 +93,7 @@ export default function Hero(): ReactNode {
 									scrollTo(0, 0);
 								}}
 							>
-								<p className="flex items-center gap-1 w-fit flex-wrap">
+								<p className="hidden sm:flex items-center gap-1 w-fit flex-wrap">
 									{dataController.articlesController.articles[3].category.map(
 										(cat, i) => (
 											<span
@@ -105,10 +105,10 @@ export default function Hero(): ReactNode {
 										)
 									)}
 								</p>
-								<h1 className="text-base font-semibold line-clamp-2">
+								<h1 className="text-sm sm:text-base font-semibold line-clamp-2">
 									{dataController.articlesController.articles[3].title}
 								</h1>
-								<div className="flex items-center space-x-3 space-y-0.5 flex-wrap self-end mt-1">
+								<div className="hidden sm:flex items-center space-x-3 space-y-0.5 flex-wrap self-end mt-1">
 									<p className="flex items-center gap-1.5">
 										<LuClockArrowUp className="flex-none text-sm" />
 										<span className="text-xs">
@@ -138,7 +138,7 @@ export default function Hero(): ReactNode {
 							</div>
 						</div>
 						<div
-							className=" flex flex-col justify-end"
+							className="aspect-square sm:aspect-auto flex flex-col justify-end"
 							style={{
 								backgroundImage: `url(${dataController.articlesController.articles[2].coverImage})`,
 								backgroundSize: "cover",
@@ -154,7 +154,7 @@ export default function Hero(): ReactNode {
 									scrollTo(0, 0);
 								}}
 							>
-								<p className="flex items-center gap-1 w-fit flex-wrap">
+								<p className="hidden sm:flex items-center gap-1 w-fit flex-wrap">
 									{dataController.articlesController.articles[2].category.map(
 										(cat, i) => (
 											<span
@@ -166,10 +166,10 @@ export default function Hero(): ReactNode {
 										)
 									)}
 								</p>
-								<h1 className="text-base font-semibold line-clamp-2">
+								<h1 className="text-sm sm:text-base font-semibold line-clamp-2">
 									{dataController.articlesController.articles[2].title}
 								</h1>
-								<div className="flex items-center space-x-3 space-y-0.5 flex-wrap self-end mt-1">
+								<div className="hidden sm:flex items-center space-x-3 space-y-0.5 flex-wrap self-end mt-1">
 									<p className="flex items-center gap-1.5">
 										<LuClockArrowUp className="flex-none text-sm" />
 										<span className="text-xs">
@@ -199,7 +199,7 @@ export default function Hero(): ReactNode {
 							</div>
 						</div>
 						<div
-							className="col-span-2 flex flex-col justify-end"
+							className="aspect-square sm:aspect-auto sm:col-span-2 flex flex-col justify-end"
 							style={{
 								backgroundImage: `url(${dataController.articlesController.articles[1].coverImage})`,
 								backgroundSize: "cover",
@@ -215,7 +215,7 @@ export default function Hero(): ReactNode {
 									scrollTo(0, 0);
 								}}
 							>
-								<p className="flex items-center gap-1 w-fit flex-wrap">
+								<p className="hidden sm:flex items-center gap-1 w-fit flex-wrap">
 									{dataController.articlesController.articles[1].category.map(
 										(cat, i) => (
 											<span
@@ -227,10 +227,10 @@ export default function Hero(): ReactNode {
 										)
 									)}
 								</p>
-								<h1 className="text-xl font-semibold line-clamp-2">
+								<h1 className="text-sm sm:text-xl font-semibold line-clamp-2">
 									{dataController.articlesController.articles[1].title}
 								</h1>
-								<div className="flex items-center space-x-3 space-y-0.5 flex-wrap self-end mt-1">
+								<div className="hidden sm:flex items-center space-x-3 space-y-0.5 flex-wrap self-end mt-1">
 									<p className="flex items-center gap-1.5">
 										<LuClockArrowUp className="flex-none text-base" />
 										<span className="text-sm">

@@ -14,8 +14,8 @@ export default function Header(): ReactNode {
 
 	return (
 		<div className="sticky top-0 p-2 z-50 sm:px-8">
-			<div className="bg-black/10 backdrop-blur-sm text-white flex justify-between items-center">
-				<div className="flex">
+			<div className="bg-black/10 backdrop-blur-sm text-white flex justify-center sm:justify-between items-center">
+				<div className="hidden sm:flex">
 					<div className="p-3 cursor-pointer opacity-80 transition duration-300 hover:opacity-100 hover:bg-white/10 hover:backdrop-blur-sm">
 						<LuSettings />
 					</div>
@@ -46,7 +46,7 @@ export default function Header(): ReactNode {
 					</p>
 				</Link>
 
-				<div className="flex">
+				<div className="hidden sm:flex">
 					<div className="p-3 cursor-pointer opacity-80 transition duration-300 hover:opacity-100 hover:bg-white/10 hover:backdrop-blur-sm">
 						<BsGithub className="text-base" />
 					</div>

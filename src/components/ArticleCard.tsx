@@ -9,9 +9,9 @@ import type { IContext } from "../interfaces/context.interface";
 export default function ArticleCard({ article }: { article: IArticle }) {
 	const { navigate } = useContext(Context) as IContext;
 	return (
-		<div className="flex min-h-[200px]">
+		<div className="flex min-h-[200px] flex-col lg:flex-row">
 			<div
-				className="flex-1"
+				className="flex-1 aspect-video lg:aspect-square"
 				style={{
 					backgroundImage: `url(/${article.coverImage})`,
 					backgroundSize: "cover",
@@ -19,7 +19,7 @@ export default function ArticleCard({ article }: { article: IArticle }) {
 				}}
 			></div>
 			<div
-				className="flex-1 p-3 gap-2 bg-black/10 backdrop-blur-sm flex flex-col justify-between cursor-pointer"
+				className="flex-1 p-1 py-3 sm:p-3 gap-2 bg-black/10 backdrop-blur-sm flex flex-col justify-between cursor-pointer"
 				onClick={() => {
 					navigate(`/articles/${article.id}`);
 					scrollTo(0, 0);

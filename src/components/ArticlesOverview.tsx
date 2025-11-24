@@ -16,7 +16,7 @@ export default function ArticlesOverview(): ReactNode {
 					practical takeaways.
 				</p>
 			</div>
-			<div className="grid gap-2 grid-cols-[repeat(2,minmax(200px,1fr))]">
+			<div className="grid gap-2 grid-cols-[repeat(1,minmax(200px,1fr))] sm:grid-cols-[repeat(2,minmax(200px,1fr))]">
 				{dataController.articlesController.articles
 					.slice(0, 4)
 					.map((article, i) => (
