@@ -61,7 +61,7 @@ src/
 │── pages/
 │── App.tsx # Root component
 │── index.css
-│── main.tsx # Application entry point
+└── main.tsx # Application entry point
 ```
 
 ---
