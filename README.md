@@ -51,10 +51,14 @@ The application provides a modern blog experience with article browsing, filteri
 
 ```bash
 src/
+│── assets/
+│── classes/
 │── components/
-│── pages/
 │── context/ # Context API providers
 │── data/ # Static or mock blog data
+│── fonts/
+│── interface/
+│── pages/
 │── App.tsx # Root component
 │── index.css
 │── main.tsx # Application entry point
