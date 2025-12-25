@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# DailyMe Personal Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**DailyMe** is a clean and modern personal blog system designed for an intuitive reading and browsing experience. It features a structured layout with reusable components, efficient navigation, and a responsive UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Overview
 
-## React Compiler
+DailyMe provides:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- A **Home page** showcasing the latest blog posts
+- A **Feed page** with pagination, category filters, and search functionality
+- An **Article page** displaying full post content along with related articles
 
-## Expanding the ESLint configuration
+Each blog post is presented using a reusable **Post Card** component that includes:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Title
+- Featured image
+- Category
+- Short summary
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This approach ensures quick browsing and consistent presentation across the application.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Latest posts overview on the Home page
+- Paginated feed with filtering and search
+- Full article view with comments and related posts sections.
+- Reusable and scalable UI components
+- Responsive design using Tailwind CSS
+- Client-side routing with React Router
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack
+
+- **React.js**
+- **TypeScript**
+- **React Router DOM**
+- **Tailwind CSS**
+- **Moment.js** (date formatting)
+- **React Icons**
